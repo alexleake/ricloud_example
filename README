@@ -1,3 +1,12 @@
 script to test the ricloud python module, see:
 
 https://github.com/reincubate/ricloud
+
+-
+
+to test this script, place this into a file called credentials.py
+
+APPLE_ID='foo@bar.com'
+APPLE_PASSWORD=1234
+
+otherwise, use your actual credentials...
