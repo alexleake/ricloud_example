@@ -6,6 +6,9 @@ import os
 
 from ricloud.api import RiCloud
 
+# test search string
+search = 'google'
+
 # example of credentials file
 example_credentials = "APPLE_ID='foo@bar.com'\nAPPLE_PASSWORD=1234"
 
@@ -29,4 +32,7 @@ else:
     for device in api.devices:
         data = api.backup_client.request_data(device_id=device, data_mask=4)
 
-print data
+if search in data['url']:
+    print "site found, {url}, visited on {visit}.".format(url=data['url'],visit=data['last_visit'])
+else:
+    print "pattern not found."
